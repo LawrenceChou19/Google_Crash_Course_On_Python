@@ -265,3 +265,61 @@ hamlet = Piglet()
 print(hamlet.pig_years())
 hamlet.years = 2
 print(hamlet.pig_years())
+
+class Apple:
+    def __init__(self,color,flavor):
+        self.color = color
+        self.flavor = flavor
+        
+        
+jonagold = Apple("red","sweet")
+print(jonagold.color)
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greeting(self):
+        # Should return "hi, my name is " followed by the name of the Person.
+        return  ("hi, my name is {}".format(self.name))
+
+# Create a new instance with a name of your choice
+some_person = Person("Ivan") 
+# Call the greeting method
+print(some_person.greeting())
+
+class Apple:
+    def __init__(self,color, flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
+joangold = Apple("red","sweet")
+print(jonagold)
+print(help(Apple))
+
+def to_second(hours,minutes,seconds):
+    """Returns the amount of seconds in the given hours, minutes, and seconds."""
+    return hours*3600+minutes*60+seconds
+print(help(to_second))
+
+class Piglet:
+    """Represents a piglet that can say their name."""
+    years = 0
+    name = ""
+    def speak(self):
+        """Outputs a message including the name of the piglet."""
+        print("Oink! I'm {}! Oink!".format(self.name))
+    def pig_years(self):
+        """Converts the current age to equivalent pig years."""
+        return self.years * 18
+print(help(Piglet))
+
+
+class Person:
+	def __init__(self, name):
+		self.name = name
+	def greeting(self):
+		"""Outputs a message with the name of the person"""
+		print("Hello! My name is {name}.".format(name=self.name))     
+help(Person)
