@@ -38,7 +38,6 @@ print(hamlet.pig_years())
 hamlet.years = 2
 print(hamlet.pig_years())
 
-#######################################################
 class Apple:
     def __init__(self,color,flavor):
         self.color = color
@@ -48,7 +47,7 @@ class Apple:
 jonagold = Apple("red","sweet")
 print(jonagold.color)
 
-##########################quiz
+
 class Person:
     def __init__(self, name):
         self.name = name
@@ -60,7 +59,7 @@ class Person:
 some_person = Person("Ivan") 
 # Call the greeting method
 print(some_person.greeting())
-######################################################################
+
 class Apple:
     def __init__(self,color, flavor):
         self.color = color
@@ -76,7 +75,6 @@ def to_second(hours,minutes,seconds):
     return hours*3600+minutes*60+seconds
 print(help(to_second))
 
-
 class Piglet:
     """Represents a piglet that can say their name."""
     years = 0
@@ -89,16 +87,15 @@ class Piglet:
         return self.years * 18
 # print(help(Piglet))
 
+
 class Person:
-  def __init__(self, name):
-    self.name = name
-  def greeting(self):
-    """Outputs a message with the name of the person"""
-    print("Hello! My name is {name}.".format(name=self.name)) 
+	def __init__(self, name):
+		self.name = name
+	def greeting(self):
+		"""Outputs a message with the name of the person"""
+		print("Hello! My name is {name}.".format(name=self.name))     
+# help(Person)
 
-help(Person)
-
-#############################################################
 class Elevator:
 	def __init__(self, bottom, top, current):
 		"""Initializes the Elevator instance."""
