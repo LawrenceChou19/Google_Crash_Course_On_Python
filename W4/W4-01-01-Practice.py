@@ -21,7 +21,7 @@ print(name[1])
 print(name[0])
 print(name[5])
 # print(name[6])
-
+#test
 text="Random string with a lot of characters"
 print(text[-1])
 print(text[-2])
