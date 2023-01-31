@@ -1,43 +1,45 @@
-print(type(0))
-print(type("")) 
-print(dir(""))
+# print(type(0))
+# print(type("")) 
+# print(dir(""))
 
-# print(help("int"))
+# # print(help("int"))
 
-class Apple:
-    pass
+# class Apple:
+#     pass
 
-class Apple:
-    color = ""
-    flavor = ""
+# class Apple:
+#     color = ""
+#     flavor = ""
 
-jonagold= Apple()
-jonagold.color = "red"
-jonagold.flavor = "sweet"
-print(jonagold.color)
-print(jonagold.flavor)
+# jonagold= Apple()
+# jonagold.color = "red"
+# jonagold.flavor = "sweet"
+# print(jonagold.color)
+# print(jonagold.flavor)
 
-goldem =  Apple()
-goldem.color = "Yellow"
-goldem.flavor = "Soft"
-
-
-class Flower:
-  color = 'unknown'
-
-rose = Flower()
-rose.color = "Red"
-
-violet = Flower()
-violet.color = "Blue"
-
-this_pun_is_for_you = "Sugar is sweet, and so are you."
-
-print("Roses are {},".format(rose.color))
-print("violets are {},".format(violet.color))
-print(this_pun_is_for_you) 
+# goldem =  Apple()
+# goldem.color = "Yellow"
+# goldem.flavor = "Soft"
 
 
+# #quiz
+# class Flower:
+#   color = 'unknown'
+
+# rose = Flower()
+# rose.color = "Red"
+
+# violet = Flower()
+# violet.color = "Blue"
+
+# this_pun_is_for_you = "Sugar is sweet, and so are you."
+
+# print("Roses are {},".format(rose.color))
+# print("violets are {},".format(violet.color))
+# print(this_pun_is_for_you) 
+
+
+###################Practice Quiz: Object-oriented Programming (Optional)################
 
 # “If you have an apple and I have an apple and we exchange these apples then
 # you and I will still each have one apple. But if you have an idea and I have
@@ -64,7 +66,7 @@ def exchange_apples(you, me):
 #so that "you" and "me" will exchange ALL their apples with one another?
 #Do you need a temporary variable to store one of the values?
 #You may need more than one line of code to do that, which is OK. 
-      you.apples, me.apples = me.apples, you.apples
+      you.apples, me.apples = me.apples, you.apples #exchange apples
         
       return you.apples, me.apples
     
@@ -76,9 +78,13 @@ def exchange_ideas(you, me):
     #each idea attribute? Do you need a temporary variable to store 
     #the sum of ideas, or can you find another way? 
     #Use as many lines of code as you need here.
-    you.ideas += me.ideas
-    me.ideas += you.ideas - me.ideas
-    return you.ideas, me.ideas
+
+	# print('before you.ideas is ',you.ideas,'me.ideas is ',me.ideas)
+	you.ideas += me.ideas #exchange the idea you.ideas add me.ideas = 2
+	# print('after you.ideas is ',you.ideas,'me.ideas is ',me.ideas)
+	me.ideas += you.ideas - me.ideas # me.ideas = 1, plus you.ideas-me.ideas=1, 1+1 =2
+	# print('after you.ideas is ',you.ideas,'me.ideas is ',me.ideas)
+	return you.ideas, me.ideas
 
 exchange_apples(johanna, martin)
 print("Johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))
@@ -128,16 +134,20 @@ def max_elevation_city(min_population):
 	# does city #1 have at least min_population and
 	# is its elevation the highest evaluated so far?
 	if city1.population >= min_population:
+		print('min_population is ',min_population,'City population is ',city1.population)
 		return_city = city1
 	# Evaluate the 2nd instance to meet the requirements:
 	# does city #2 have at least min_population and
 	# is its elevation the highest evaluated so far?
 	if city2.population >= min_population and city2.elevation > return_city.elevation:
+		print('min_population is ',min_population,'City2 population is',city2.population,'and city2 elevation >',return_city.elevation)
 		return_city = city2
 	# Evaluate the 3rd instance to meet the requirements:
 	# does city #3 have at least min_population and
+	
 	# is its elevation the highest evaluated so far?
 	if city3.population >= min_population and city3.elevation > return_city.elevation:
+		print('min_population is ',min_population,'City2 population is',city3.population,'and city3 elevation >',return_city.elevation)
 		return_city = city3
 
 	#Format the return string
