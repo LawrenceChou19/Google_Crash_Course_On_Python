@@ -134,20 +134,21 @@ def max_elevation_city(min_population):
 	# does city #1 have at least min_population and
 	# is its elevation the highest evaluated so far?
 	if city1.population >= min_population:
-		print('min_population is ',min_population,'City population is ',city1.population)
+		print('min_population is ',min_population,'City1 population is ',city1.population)
 		return_city = city1
 	# Evaluate the 2nd instance to meet the requirements:
 	# does city #2 have at least min_population and
 	# is its elevation the highest evaluated so far?
 	if city2.population >= min_population and city2.elevation > return_city.elevation:
-		print('min_population is ',min_population,'City2 population is',city2.population,'and city2 elevation >',return_city.elevation)
+		print('min_population is ',min_population,'City2 population is',city2.population,'and City2 elevation vs return_city.elevation is ',city2.elevation," > ",return_city.elevation)
 		return_city = city2
+		# print(return_city.elevation)
 	# Evaluate the 3rd instance to meet the requirements:
 	# does city #3 have at least min_population and
 	
 	# is its elevation the highest evaluated so far?
 	if city3.population >= min_population and city3.elevation > return_city.elevation:
-		print('min_population is ',min_population,'City2 population is',city3.population,'and city3 elevation >',return_city.elevation)
+		print('min_population is ',min_population,'City3 population is',city3.population,'and City3 elevation >',return_city.elevation)
 		return_city = city3
 
 	#Format the return string
@@ -245,11 +246,4 @@ print(describe_furniture(couch))
 
 
 
-#Practice
-# class Piglet:
-#     def speak(self):
-#         print("oink oink")
-
-# hamlet = Piglet()
-# hamlet.speak()
 

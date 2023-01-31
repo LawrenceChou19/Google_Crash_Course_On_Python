@@ -27,6 +27,8 @@ class Cow(Animal):
 milky = Cow("Milky White")
 milky.speak()
 
+##############quiz
+
 class Clothing:
   material = ""
   def __init__(self,name):
@@ -40,6 +42,7 @@ class Shirt(Clothing):
 polo = Shirt("Polo")
 polo.checkmaterial()
 
+############################################################
 class Repository:
     def __init__(self):
         self.packages = {}

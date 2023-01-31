@@ -1,3 +1,10 @@
+#Practice
+class Piglet:
+    def speak(self):
+        print("oink oink")
+
+hamlet = Piglet()
+hamlet.speak()
 
 class Piglet:
     name = "piglet"
@@ -16,11 +23,22 @@ class Piglet:
     def pig_years(self):
         return self.years * 18
 
+class Dog:
+  years = 0
+  def dog_years(self):
+    return self.years * 7
+    
+fido=Dog() 
+fido.years=3
+print(fido.dog_years())
+
+
 hamlet = Piglet()
 print(hamlet.pig_years())
 hamlet.years = 2
 print(hamlet.pig_years())
 
+#######################################################
 class Apple:
     def __init__(self,color,flavor):
         self.color = color
@@ -30,7 +48,7 @@ class Apple:
 jonagold = Apple("red","sweet")
 print(jonagold.color)
 
-
+##########################quiz
 class Person:
     def __init__(self, name):
         self.name = name
@@ -42,7 +60,7 @@ class Person:
 some_person = Person("Ivan") 
 # Call the greeting method
 print(some_person.greeting())
-
+######################################################################
 class Apple:
     def __init__(self,color, flavor):
         self.color = color
@@ -51,12 +69,13 @@ class Apple:
         return "This apple is {} and its flavor is {}".format(self.color,self.flavor)
 joangold = Apple("red","sweet")
 print(jonagold)
-print(help(Apple))
+# print(help(Apple))
 
 def to_second(hours,minutes,seconds):
     """Returns the amount of seconds in the given hours, minutes, and seconds."""
     return hours*3600+minutes*60+seconds
 print(help(to_second))
+
 
 class Piglet:
     """Represents a piglet that can say their name."""
@@ -68,17 +87,18 @@ class Piglet:
     def pig_years(self):
         """Converts the current age to equivalent pig years."""
         return self.years * 18
-print(help(Piglet))
-
+# print(help(Piglet))
 
 class Person:
-	def __init__(self, name):
-		self.name = name
-	def greeting(self):
-		"""Outputs a message with the name of the person"""
-		print("Hello! My name is {name}.".format(name=self.name))     
+  def __init__(self, name):
+    self.name = name
+  def greeting(self):
+    """Outputs a message with the name of the person"""
+    print("Hello! My name is {name}.".format(name=self.name)) 
+
 help(Person)
 
+#############################################################
 class Elevator:
 	def __init__(self, bottom, top, current):
 		"""Initializes the Elevator instance."""
